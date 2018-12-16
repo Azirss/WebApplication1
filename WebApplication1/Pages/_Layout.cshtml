@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -26,13 +26,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-page="/Index" class="navbar-brand">WebApplication1</a>
+                <a asp-page="/Index" class="navbar-brand">知识图谱(管理员)</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-page="/Index">Home</a></li>
-                    <li><a asp-page="/About">About</a></li>
-                    <li><a asp-page="/Contact">Contact</a></li>
+                    <li><a asp-page="/Index">主页面</a></li>
+                    <li><a asp-page="/Knowledge">知识图谱</a></li>
+                    <li><a asp-page="/Distribute">查看分布</a></li>
+                    <li><a asp-page="/About">帮助</a></li>
+                    <li><a asp-page="/Contact">联系我们</a></li>
                 </ul>
             </div>
         </div>
@@ -41,7 +43,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2017 - WebApplication1</p>
+            <p>&copy; 知识图谱</p>
         </footer>
     </div>
 
