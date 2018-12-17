@@ -1,0 +1,144 @@
+﻿@page
+@model WebApplication1.Pages.AttendingModel
+@{
+    ViewData["Title"] = "历史趋势";
+}
+
+<link rel="stylesheet" href="~/css/Attending.css" />
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+<div id="chart"></div>
+<div id=" white"></div>
+<div id="map"></div>
+<script type="text/javascript">
+    Highcharts.chart('map', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: '武汉市一中知识点掌握百分比, 2018'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                }
+            }
+        },
+        series: [{
+            name: 'Brands',
+            colorByPoint: true,
+            data: [{
+                name: '数学',
+                y: 61.41,
+                sliced: true,
+                selected: true
+            }, {
+                name: '语文',
+                y: 11.84
+            }, {
+                name: '英语',
+                y: 10.85
+            }, {
+                name: '化学',
+                y: 4.67
+            }, {
+                name: '物理',
+                y: 4.18
+            }, {
+                name: '地理',
+                y: 1.64
+            }, {
+                name: '生物',
+                y: 1.6
+            }, {
+                name: '体育',
+                y: 1.2
+            }, {
+                name: '其他',
+                y: 2.61
+            }]
+        }]
+    });
+</script>
+<script type="text/javascript">
+    Highcharts.chart('chart', {
+
+        title: {
+            text: '数学学科知识掌握度变化图, 2018'
+        },
+
+        subtitle: {
+            text: '© 知识图谱'
+        },
+
+        yAxis: {
+            title: {
+                text: '掌握知识点数目'
+            }
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle'
+        },
+
+        plotOptions: {
+            series: {
+                label: {
+                    connectorAllowed: false
+                },
+                pointStart: 2018-1
+            }
+        },
+
+        series: [{
+            name: '武汉市一中',
+            data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+        }, {
+                name: '武汉市三中',
+            data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
+        }, {
+                name: '武汉市六中',
+            data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]
+        }, {
+                name: '武汉市八中',
+            data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227]
+        }, {
+                name: '武汉市十二中',
+            data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111]
+        }],
+
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500
+                },
+                chartOptions: {
+                    legend: {
+                        layout: 'horizontal',
+                        align: 'center',
+                        verticalAlign: 'bottom'
+                    }
+                }
+            }]
+        }
+
+    });
+</script>

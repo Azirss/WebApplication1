@@ -1,9 +1,81 @@
 ﻿@page
 @model AboutModel
 @{
-    ViewData["Title"] = "About";
+    ViewData["Title"] = "帮助";
 }
-<h2>@ViewData["Title"]</h2>
-<h3>@Model.Message</h3>
+<link rel="stylesheet" href="~/css/About.css" />
 
-<p>Use this area to provide additional information.</p>
+<h1>@ViewData["Title"]</h1>
+<hr>
+
+<h3 div class="title">您可以搜索关键字来寻求帮助</h3>
+<form action="http://www.baidu.com/s" method="get">
+    <p align="center"><input type="text" name="w" />&nbsp<button>&nbsp&nbsp搜&nbsp索&nbsp&nbsp</button></p>
+</form>
+
+<li class="u03-help-nav__list-item active open-dropdown has-dropdown nav-third">
+
+    <h3> 您可能用到的关键词</h3>
+
+    <ul class="u03-help-nav__dropdown">
+
+        <li class="  u03-help-nav__dropdown-item">
+            <a href="/zh_CN/help/desktop-web" class="u03-help-nav__dropdown-link"> <h4> 知识图谱介绍</h4> </a>
+        </li>
+
+
+        <li class="  u03-help-nav__dropdown-item">
+            <a href="/zh_CN/help/business" class="u03-help-nav__dropdown-link"> <h4> 知识图谱应用</h4> </a>
+        </li>
+
+
+        <li class="  u03-help-nav__dropdown-item">
+            <a href="/zh_CN/help/paper" class="u03-help-nav__dropdown-link"> <h4> 学习问题</h4> </a>
+        </li>
+
+
+        <li class="  u03-help-nav__dropdown-item">
+            <a href="/zh_CN/help/showcase" class="u03-help-nav__dropdown-link"> <h4> 保存问题</h4> </a>
+        </li>
+
+
+        <li class="  u03-help-nav__dropdown-item">
+            <a href="/zh_CN/help/account" class="u03-help-nav__dropdown-link"> <h4> 管理帐户</h4> </a>
+        </li>
+
+
+        <li class="  u03-help-nav__dropdown-item">
+            <a href="/zh_CN/help/mobile" class="u03-help-nav__dropdown-link"> <h4> 移动</h4> </a>
+        </li>
+
+
+        <li class="  u03-help-nav__dropdown-item">
+            <a href="/zh_CN/help/billing" class="u03-help-nav__dropdown-link"> <h4> 查询功能</h4> </a>
+        </li>
+
+
+        <li class="  u03-help-nav__dropdown-item">
+            <a href="/zh_CN/help/photos-videos" class="u03-help-nav__dropdown-link"> <h4> 照片和视频</h4> </a>
+        </li>
+
+
+        <li class="  u03-help-nav__dropdown-item">
+            <a href="/zh_CN/help/security" class="u03-help-nav__dropdown-link"> <h4> 安全和隐私</h4> </a>
+        </li>
+
+        <li class="  u03-help-nav__dropdown-item">
+            <a href="/zh_CN/help/sign-in" class="u03-help-nav__dropdown-link"> <h4> 登录帮助</h4> </a>
+        </li>
+
+
+        <li class="  u03-help-nav__dropdown-item">
+            <a href="/zh_CN/help/space" class="u03-help-nav__dropdown-link"> <h4> 空间和存储</h4> </a>
+        </li>
+
+        <li class="  u03-help-nav__dropdown-item">
+            <a href="/zh_CN/help/syncing-uploads" class="u03-help-nav__dropdown-link"> <h4> 同步与上传</h4> </a>
+        </li>
+    </ul>
+</li>
+<hr>
+<p>没找到答案？请联系我们.</p>

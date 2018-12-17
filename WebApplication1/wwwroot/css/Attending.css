@@ -1,0 +1,17 @@
+﻿#chart {
+    min-width: 310px;
+    max-width: 800px;
+    height: 400px;
+    margin: 0 auto
+}
+#map {
+    min-width: 310px;
+    height: 400px;
+    max-width: 600px;
+    margin: 0 auto
+}
+#white{
+    height:100px;
+    width:100%;
+    color:white;
+}
