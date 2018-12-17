@@ -1,0 +1,13 @@
+﻿.title {
+    text-align: center;
+    font: 30px;
+}
+
+.group {
+    padding: 4px 8px;
+    vertical-align: middle;
+}
+
+.lab {
+    left: 500px;
+}
