@@ -1,0 +1,49 @@
+﻿@page
+@model WebApplication1.Pages.Teacher_guideModel
+@{
+    ViewData["Title"] = "Teacher_guide";
+}
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="~/css/Teacher.css" />
+
+<div class="white">
+</div>
+<h2 div class="title">请添加知识点完善知识图谱</h2>
+<div class="white">
+</div>
+<div>
+    <form METHOD=POST ACTION="" name="form1">
+        <select name="point" onchange="showlei()">
+            <option value="">选择科目:</option>
+            <option value="数学">数学</option>
+            <option value="语文">语文</option>
+            <option value="英语">英语</option>
+            <option value="化学">化学</option>
+            <option value="地理">地理</option>
+            <option value="物理">物理</option>
+            <option value="生物">生物</option>
+            <option value="政治">政治</option>
+            <option value="历史">历史</option>
+        </select>
+    </form>
+</div>
+<div class="white">
+</div>
+<div>
+    <form>
+        <div><h5 class="lab">请输入知识点名称：</h5><input placeholder="请输入知识点名称" class="text1" /><br /><br /></div>
+        <div><h5 class="lab">请输入详细描述：</h5><input placeholder="请输入详细描述" class="text" /><br /><br /></div>
+        <div><h5 class="lab">请输入例题：</h5><input placeholder="请输入详细例题" class="text" /><br /><br /></div>
+        <button onclick="back()">提交</button>
+
+    </form>
+</div>
+<script type="text/javascript">
+    function back() {
+        alert("感谢您的提交！");
+    }
+</script>

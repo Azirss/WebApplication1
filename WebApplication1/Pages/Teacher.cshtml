@@ -1,0 +1,28 @@
+﻿@page
+@model WebApplication1.Pages.DistributeModel
+@{
+    ViewData["Title"] = "教师";
+}
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a asp-page="/Index" class="navbar-brand">知识图谱(教师)</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a asp-page="/Index">主页面</a></li>
+                <li><a asp-page="/Teacher_addpoint">完善知识图谱</a></li>
+                <li><a asp-page="/Teacher_guide">指导学生</a></li>
+                <li><a asp-page="/Teacher_check">查看班级</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container body-content">
+    <hr />
+    <footer>
+        <p>&copy; 知识图谱</p>
+    </footer>
+</div>
+
+

@@ -1,0 +1,74 @@
+﻿@page
+@model WebApplication1.Pages.Teacher_guideModel
+@{
+    ViewData["Title"] = "Teacher_guide";
+}
+
+<link rel="stylesheet" href="~/css/Teacher.css" />
+<div>
+
+    <div class="white">
+    </div>
+    <h2 div class="title">学生学习详情</h2>
+    <div>
+        <form METHOD=POST ACTION="" name="form1">
+            <select name="point" onchange="showlei()">
+                <option value="">选择科目:</option>
+                <option value="数学">数学</option>
+                <option value="语文">语文</option>
+                <option value="英语">英语</option>
+                <option value="化学">化学</option>
+                <option value="地理">地理</option>
+                <option value="物理">物理</option>
+                <option value="生物">生物</option>
+                <option value="政治">政治</option>
+                <option value="历史">历史</option>
+            </select>
+        </form>
+    </div>
+    <div class="white">
+    </div>
+    <div>
+        <form METHOD=POST ACTION="" name="form1">
+            <select name="point" onchange="showlei()">
+                <option value="">选择学生:</option>
+                <option value="张三">张三</option>
+                <option value="李四">李四</option>
+                <option value="王二">王二</option>
+                <option value="阳五">阳五</option>
+                <option value="麻六">麻六</option>
+                <option value="蒋七">蒋七</option>
+            </select>
+        </form>
+    </div>
+</div>
+
+<div>
+    <div class="white">
+    </div>
+    <div>
+        <h5 class="lab">该学生的个人知识图谱：</h5>
+        <img class="pic" src="~/images/Teacher_guide1.png" />
+    </div>
+
+    <div class="white">
+    </div>
+    <h2 div class="title">指导学生</h2>
+    <div class="white">
+    </div>
+    <div>
+        <form>
+            <div><h5 class="lab">请输入知识点名称：</h5><input placeholder="请输入知识点名称" class="text1" /><br /><br /></div>
+            <div><h5 class="lab">请指出问题所在：</h5><input placeholder="请输入详细指导" class="text" /><br /><br /></div>
+            <div><h5 class="lab">请输入详细建议：</h5><input placeholder="请输入详细例题" class="text" /><br /><br /></div>
+            <button onclick="back()">提交</button>
+
+        </form>
+    </div>
+    <script type="text/javascript">
+        function back() {
+            alert("感谢您的指导！");
+        }
+    </script>
+</div>
+

@@ -9,3 +9,39 @@
 .lab{
     left:500px;
 }
+
+#big {
+    width: 900px;
+    padding-left: 240px;
+}
+
+#top {
+    height: 200px;
+    background-color: #00FFFF;
+}
+
+#center {
+    height: 600px;
+    width: 900px;
+    overflow: hidden;
+}
+
+#left {
+    float: left;
+    width: 200px;
+    height: 600px;
+    background-color: pink;
+}
+
+#right {
+    float: right;
+    width: 700px;
+    height: 600px;
+    background-color: yellow;
+}
+
+#foot {
+    height: 100px;
+    background-color: #00FFFF;
+}
+

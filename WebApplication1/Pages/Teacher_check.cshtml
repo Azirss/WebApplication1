@@ -1,0 +1,173 @@
+﻿@page
+@model WebApplication1.Pages.Teacher_checkModel
+@{
+    ViewData["Title"] = "Teacher_check";
+}
+
+<link rel="stylesheet" href="~/css/Teacher.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>@ViewData["Title"] - WebApplication1</title>
+
+<environment include="Development">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</environment>
+<environment exclude="Development">
+    <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+          asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+          asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+    <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+</environment>
+
+<div>
+    <div class="white">
+    </div>
+    <h2 div class="title">查看我的班级</h2>
+    <div class="white">
+    </div>
+    <div>
+        <form METHOD=POST ACTION="" name="form1">
+            <select name="point" onchange="showlei()">
+                <option value="">选择科目:</option>
+                <option value="数学">数学</option>
+                <option value="语文">语文</option>
+                <option value="英语">英语</option>
+                <option value="化学">化学</option>
+                <option value="地理">地理</option>
+                <option value="物理">物理</option>
+                <option value="生物">生物</option>
+                <option value="政治">政治</option>
+                <option value="历史">历史</option>
+            </select>
+        </form>
+    </div>
+    <div>
+        <table class="table table-striped">
+            <caption>我的班级： 武汉六中高三 （28）班</caption>
+            <thead>
+                <tr>
+                    <th>学生学号</th>
+                    <th>学生姓名</th>
+                    <th>性别</th>
+                    <th>成绩</th>
+                    <th>知识点掌握度</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>001</td>
+                    <td>张三</td>
+                    <td>男</td>
+                    <td>135</td>
+                    <td>87%</td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>蒋七</td>
+                    <td>男</td>
+                    <td>135</td>
+                    <td>87%</td>
+                </tr>
+                <tr>
+                    <td>006</td>
+                    <td>李四</td>
+                    <td>男</td>
+                    <td>125</td>
+                    <td>82%</td>
+                </tr>
+                <tr>
+                    <td>009</td>
+                    <td>王二</td>
+                    <td>女</td>
+                    <td>115</td>
+                    <td>77%</td>
+                </tr>
+                <tr>
+                    <td>015</td>
+                    <td>阳五</td>
+                    <td>女</td>
+                    <td>145</td>
+                    <td>97%</td>
+                </tr>
+                <tr>
+                    <td>025</td>
+                    <td>麻六</td>
+                    <td>女</td>
+                    <td>105</td>
+                    <td>66%</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <div id=" white"></div>
+    <div id="map"></div>
+    <script type="text/javascript">
+        Highcharts.chart('map', {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: '武汉六中高三 （28）班知识点掌握图, 2018'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                        style: {
+                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: 'Brands',
+                colorByPoint: true,
+                data: [{
+                    name: '三角函数',
+                    y: 61.41,
+                    sliced: true,
+                    selected: true
+                }, {
+                    name: '圆锥曲线',
+                    y: 11.84
+                }, {
+                    name: '立体几何',
+                    y: 10.85
+                }, {
+                    name: '参数方程',
+                    y: 4.67
+                }, {
+                    name: '数列',
+                    y: 4.18
+                }, {
+                    name: '初等函数',
+                    y: 1.64
+                }, {
+                    name: '微积分基础',
+                    y: 1.6
+                }, {
+                    name: '统计',
+                    y: 1.2
+                }, {
+                    name: '虚数',
+                    y: 2.61
+                }]
+            }]
+        });
+    </script>
+</div>
